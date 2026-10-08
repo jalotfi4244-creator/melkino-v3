@@ -1,0 +1,13 @@
+/* Melkino V2 — page-specific rules (auth, listing toolbar, request wizard extras) */
+.mx-auth{max-width:460px;margin:var(--mx-space-6) auto}
+.mx-auth__logo{text-align:center;margin-bottom:var(--mx-space-5)}
+.mx-auth__logo img{height:56px;margin-inline:auto}
+.mx-listing-bar{display:flex;gap:var(--mx-space-2);align-items:center;margin-bottom:var(--mx-space-4);flex-wrap:wrap}
+.mx-listing-bar .mx-input{flex:1;min-width:180px}
+.mx-listing-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--mx-space-4);
+  color:var(--mx-text-muted);font-size:var(--mx-fs-14)}
+.mx-req-summary{background:var(--mx-surface);border:1px solid var(--mx-border);border-radius:var(--mx-radius-lg);
+  padding:var(--mx-space-4);margin-bottom:var(--mx-space-4)}
+.mx-req-summary dl{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--mx-space-2);font-size:var(--mx-fs-14)}
+.mx-req-summary dt{color:var(--mx-text-muted)}
+.mx-feedback-reasons{display:grid;gap:var(--mx-space-2)}

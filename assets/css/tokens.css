@@ -1,0 +1,22 @@
+/* Melkino V2 — design tokens (spec §43, §128). THE single source of truth for color/type/space. */
+:root{
+  --mx-primary:#0b5d59; --mx-primary-600:#0e6f67; --mx-primary-700:#084b48;
+  --mx-accent:#c9a227; --mx-accent-soft:#f3e9c8;
+  --mx-bg:#f5f7f6; --mx-surface:#ffffff; --mx-surface-soft:#eef4f2;
+  --mx-text:#13201e; --mx-text-muted:#667775; --mx-border:#dce5e2;
+  --mx-success:#147d52; --mx-warning:#a66a00; --mx-danger:#b3261e; --mx-info:#0b5d59;
+  --mx-radius-sm:10px; --mx-radius-md:14px; --mx-radius-lg:18px; --mx-radius-xl:24px;
+  --mx-shadow-sm:0 2px 8px rgba(0,0,0,.05); --mx-shadow-md:0 10px 30px rgba(0,0,0,.08);
+  --mx-font:"Vazirmatn",Tahoma,Arial,sans-serif;
+  --mx-fs-12:12px; --mx-fs-14:14px; --mx-fs-16:16px; --mx-fs-18:18px;
+  --mx-fs-20:20px; --mx-fs-24:24px; --mx-fs-28:28px; --mx-fs-32:32px; --mx-fs-40:40px;
+  --mx-space-1:4px; --mx-space-2:8px; --mx-space-3:12px; --mx-space-4:16px;
+  --mx-space-5:20px; --mx-space-6:24px; --mx-space-8:32px; --mx-space-10:40px;
+  --mx-bottom-nav-h:68px;
+}
+body[data-mx-color="dark"]{
+  --mx-bg:#0d1413; --mx-surface:#16211f; --mx-surface-soft:#1d2a27;
+  --mx-text:#f3f4f6; --mx-text-muted:#a8b1ae; --mx-border:#2a3835;
+  --mx-accent:#d9b64a; --mx-shadow-sm:0 2px 8px rgba(0,0,0,.3); --mx-shadow-md:0 10px 30px rgba(0,0,0,.35);
+}
+body[data-mx-color="light"]{ --mx-bg:#fafbfb; }

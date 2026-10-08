@@ -1,0 +1,22 @@
+/* Local bot controls and publication dialogs, shared by legacy and V2. */
+[data-bot-section] .admin-field-label{display:block;margin:14px 0 6px;font-size:13px;font-weight:700}
+[data-bot-section] .admin-input{box-sizing:border-box;width:min(100%,640px);max-width:100%;padding:10px 12px;border:1px solid var(--border,#d8e2dc);border-radius:10px;background:var(--surface,#fff);color:var(--text-primary,#153e34);font:inherit;line-height:1.6}
+[data-bot-section] .admin-input[dir="ltr"]{text-align:left}
+[data-bot-section] .admin-input:disabled{opacity:.6}
+[data-bot-section] .admin-field-help{font-size:12px;line-height:1.9;color:var(--text-secondary,#5d7268);margin:6px 0 12px}
+[data-bot-section] .mk-bot-actions button{border-radius:10px;padding:9px 13px;line-height:1.5;font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--border,#cbdad1)}
+[data-bot-section] .mk-bot-actions .btn-primary{background:#0b5d59;color:#fff;border-color:#0b5d59}
+[data-bot-section] .mk-bot-actions .btn-secondary{background:var(--surface,#fff);color:var(--text-primary,#153e34)}
+[data-bot-section] .mk-bot-actions button:disabled{cursor:wait;opacity:.55}
+#publishComposerModal .modal-box{max-height:92dvh;overflow:auto}
+#pubCompText{text-align:right;direction:rtl}
+#publogOverlay{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;z-index:40000!important;padding:16px}
+#publogOverlay.open{display:flex}
+#publogOverlay .publog-modal{background:var(--surface,#fff);color:var(--text-primary,#17392f);border:1px solid var(--border,#ccc);border-radius:16px;width:min(1000px,96vw);max-height:85dvh;display:flex;flex-direction:column;overflow:hidden}
+#publogOverlay .publog-head{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:14px;border-bottom:1px solid var(--border,#ccc)}
+#publogOverlay .publog-close{background:transparent;border:0;font-size:20px;color:inherit;cursor:pointer}
+#publogOverlay .publog-body{padding:14px;overflow:auto}
+#publogOverlay table{width:100%;min-width:650px;border-collapse:collapse;font-size:12px}
+#publogOverlay td,#publogOverlay th{padding:10px;border-bottom:1px solid var(--border,#ddd);text-align:right;overflow-wrap:anywhere}
+#publogOverlay .publog-ok{color:#168c63}#publogOverlay .publog-fail{color:#c74848}
+@media(max-width:720px){#pubCompBody{grid-template-columns:minmax(0,1fr)!important}#publogOverlay{padding:8px}[data-bot-section] .admin-input{width:100%}}

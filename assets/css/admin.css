@@ -1,0 +1,40 @@
+/* Melkino V2 — admin shell (spec §33). mx- namespace only. */
+.mx-admin{margin:0;font-family:var(--mx-font,Tahoma,Arial,sans-serif);line-height:1.7;background:var(--mx-bg,#0f1513);color:var(--mx-text,#eef2f0);min-height:100vh}
+.mx-admin *{box-sizing:border-box}
+.mx-admin .mx-sr-only:not(:focus){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.mx-admin__shell{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+.mx-admin__side{background:#0b100e;border-inline-start:1px solid #1e2a26;padding:18px 14px;display:flex;flex-direction:column;gap:18px;position:sticky;top:0;height:100vh;overflow:auto}
+.mx-admin__brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-size:20px}
+.mx-admin__brand small{font-size:12px;color:var(--mx-gold,#d8b56b);font-weight:400}
+.mx-admin__side nav ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.mx-admin__side nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:#cfd8d4;text-decoration:none;font-size:14px}
+.mx-admin__side nav a:hover{background:#16201c;color:#fff}
+.mx-admin__side nav a.is-active{background:var(--mx-green-900,#123b36);color:#fff}
+.mx-admin__side-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #1e2a26;padding-top:12px}
+.mx-admin__side-foot a{color:var(--mx-gold,#d8b56b)}
+.mx-admin__main{min-width:0;display:flex;flex-direction:column}
+.mx-admin__top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid #1e2a26}
+.mx-admin__top h1{font-size:20px;margin:0}
+.mx-admin__kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:18px 22px 0}
+.mx-admin__kpi{background:#121917;border:1px solid #1e2a26;border-radius:14px;padding:14px;text-decoration:none;color:inherit;display:grid;gap:4px}
+.mx-admin__kpi:hover{border-color:var(--mx-gold,#d8b56b)}
+.mx-admin__kpi-n{font-size:26px;font-weight:800}
+.mx-admin__kpi-l{font-size:12px;color:#a8b1ae}
+.mx-admin__content{padding:18px 22px 40px}
+.mx-admin__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mx-admin__list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.mx-admin__list a{color:inherit;text-decoration:none;display:flex;gap:8px;align-items:center}
+.mx-admin__list a:hover{color:var(--mx-gold,#d8b56b)}
+.mx-badge--ok{background:#14532d;color:#bbf7d0}
+.mx-badge--warn{background:#713f12;color:#fde68a}
+@media (max-width:900px){
+  .mx-admin__shell{grid-template-columns:1fr}
+  .mx-admin__side{position:static;height:auto}
+  .mx-admin__side nav ul{grid-auto-flow:column;grid-auto-columns:max-content;overflow-x:auto}
+  .mx-admin__side nav a span{white-space:nowrap}
+  .mx-admin__grid{grid-template-columns:1fr}
+}
+
+/* Resolve legacy variable aliases on the themed body, not the light :root. */
+.mx-admin{--bg:var(--mx-bg);--surface:var(--mx-surface);--border:var(--mx-border);--text-primary:var(--mx-text);--text-secondary:var(--mx-text-muted);--text-muted:var(--mx-text-muted);--primary:var(--mx-primary)}
+.mx-admin .admin-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px;min-width:0}

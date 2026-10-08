@@ -1,0 +1,25 @@
+/* Melkino V2 — property cards (spec §16, §112): subtle border/shadow, radius 16–20, generous space */
+.mx-grid{display:grid;gap:var(--mx-space-4);grid-template-columns:1fr}
+@media(min-width:560px){.mx-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.mx-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1280px){.mx-grid{grid-template-columns:repeat(4,1fr)}}
+.mx-card{background:var(--mx-surface);border:1px solid var(--mx-border);border-radius:var(--mx-radius-lg);
+  overflow:hidden;box-shadow:var(--mx-shadow-sm);display:flex;flex-direction:column;position:relative}
+.mx-card__media{position:relative;display:block;aspect-ratio:3/2;background:var(--mx-surface-soft)}
+.mx-card__img{width:100%;height:100%;object-fit:cover}
+.mx-card__badges{position:absolute;top:12px;right:12px;display:flex;gap:6px}
+.mx-card__fav{position:absolute;top:10px;left:10px;width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;color:var(--mx-text);box-shadow:var(--mx-shadow-sm)}
+.mx-card__fav.is-active{color:var(--mx-danger)}
+.mx-card__body{padding:var(--mx-space-4);display:flex;flex-direction:column;gap:var(--mx-space-2);flex:1}
+.mx-card__title{font-size:var(--mx-fs-16);line-height:1.7;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mx-card__loc{display:flex;align-items:center;gap:6px;color:var(--mx-text-muted);font-size:var(--mx-fs-14);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mx-card__feats{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--mx-text-muted);font-size:var(--mx-fs-14)}
+.mx-card__feats li{display:flex;align-items:center;gap:5px}
+.mx-card__price{font-size:var(--mx-fs-18);font-weight:700;color:var(--mx-primary-700);margin-top:auto;padding-top:var(--mx-space-2)}
+body[data-mx-color="dark"] .mx-card__price{color:var(--mx-accent)}
+.mx-card__actions{display:flex;gap:var(--mx-space-2);margin-top:var(--mx-space-2)}
+.mx-card__actions .mx-btn--primary{flex:1}
+.mx-card--compact .mx-card__body{padding:var(--mx-space-3);gap:6px}
+.mx-card--premium{border-color:var(--mx-accent)}

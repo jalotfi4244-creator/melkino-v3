@@ -1,0 +1,13 @@
+/* Melkino V2 — typography (Vazirmatn, scale 12–40, spec §44) */
+@font-face{font-family:"Vazirmatn";font-style:normal;font-weight:400;font-display:swap;
+  src:local("Vazirmatn"),local("Vazirmatn-Regular")}
+@font-face{font-family:"Vazirmatn";font-style:normal;font-weight:700;font-display:swap;
+  src:local("Vazirmatn Bold"),local("Vazirmatn-Bold")}
+body{font-family:var(--mx-font);color:var(--mx-text);background:var(--mx-bg);font-size:var(--mx-fs-16)}
+h1,.mx-h1{font-size:var(--mx-fs-28);line-height:1.5;font-weight:700}
+h2,.mx-h2{font-size:var(--mx-fs-24);line-height:1.6;font-weight:700}
+h3,.mx-h3{font-size:var(--mx-fs-20);line-height:1.6;font-weight:700}
+.mx-lead{font-size:var(--mx-fs-18);color:var(--mx-text-muted)}
+.mx-small{font-size:var(--mx-fs-14);color:var(--mx-text-muted)}
+.mx-tiny{font-size:var(--mx-fs-12);color:var(--mx-text-muted)}
+.mx-num{font-variant-numeric:tabular-nums}

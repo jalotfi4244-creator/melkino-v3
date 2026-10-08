@@ -1,0 +1,13 @@
+/* Melkino V2 — Design Studio specific (spec §42, §49). Simplified preset UX. */
+.mx-studio{display:grid;gap:var(--mx-space-4)}
+@media(min-width:1024px){.mx-studio{grid-template-columns:320px 1fr}}
+.mx-studio__panel{background:var(--mx-surface);border:1px solid var(--mx-border);border-radius:var(--mx-radius-lg);padding:var(--mx-space-4)}
+.mx-studio__group{margin-bottom:var(--mx-space-4)}
+.mx-studio__group>h4{font-size:var(--mx-fs-14);color:var(--mx-text-muted);margin-bottom:var(--mx-space-2)}
+.mx-studio__opts{display:flex;gap:var(--mx-space-2);flex-wrap:wrap}
+.mx-studio__opt{border:1px solid var(--mx-border);border-radius:var(--mx-radius-md);padding:8px 16px;
+  font-weight:700;min-height:44px;background:var(--mx-surface)}
+.mx-studio__opt.is-active{border-color:var(--mx-primary);background:rgba(11,93,89,.06);box-shadow:0 0 0 1px var(--mx-primary)}
+.mx-studio__preview{background:var(--mx-bg);border:1px solid var(--mx-border);border-radius:var(--mx-radius-lg);
+  padding:var(--mx-space-4);min-height:420px}
+.mx-studio__bar{display:flex;gap:var(--mx-space-2);margin-top:var(--mx-space-4);flex-wrap:wrap}

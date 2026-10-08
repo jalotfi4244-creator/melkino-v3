@@ -1,0 +1,53 @@
+/* Melkino V2 — admin-partnership styles, extracted VERBATIM, page-scoped. */
+
+    :root { --p: #064E4E; --p2: #0F766E; --gold: #A98416; --bg: #F6F7F4; --sf: #fff; --bd: #E5E7EB; --tx: #111827; --tx2: #6B7280; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--tx); font-family: Vazirmatn, Tahoma, sans-serif; font-size: 13.5px; }
+    .top { background: var(--sf); border-bottom: 1px solid var(--bd); padding: 14px 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 20; }
+    .top h1 { font-size: 16px; margin: 0; font-weight: 900; color: var(--p); }
+    .top .spacer { flex: 1; }
+    input, select, textarea, button { font-family: inherit; }
+    .inp { border: 1.5px solid var(--bd); border-radius: 10px; padding: 8px 12px; font-size: 13px; background: #fff; }
+    .btn { border: 0; border-radius: 10px; padding: 9px 16px; font-size: 13px; font-weight: 800; cursor: pointer; }
+    .btn-p { background: var(--p); color: #fff; }
+    .btn-g { background: #fff; border: 1.5px solid var(--bd); color: var(--tx2); }
+    .btn-d { background: rgba(192,57,43,.08); color: #C0392B; }
+    .wrap { padding: 18px 20px; max-width: 1200px; margin: 0 auto; }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; }
+    .chip { border: 1.5px solid var(--bd); background: #fff; border-radius: 99px; padding: 7px 14px; font-size: 12.5px; font-weight: 700; color: var(--tx2); cursor: pointer; }
+    .chip.on { background: var(--p); border-color: var(--p); color: #fff; }
+    table { width: 100%; border-collapse: collapse; background: var(--sf); border-radius: 14px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.05); }
+    th { background: #F0F2ED; font-size: 11.5px; color: var(--tx2); padding: 10px 12px; text-align: right; white-space: nowrap; }
+    td { padding: 11px 12px; border-top: 1px solid var(--bd); vertical-align: middle; }
+    tr.row { cursor: pointer; transition: background .15s; }
+    tr.row:hover { background: #FBFCFA; }
+    .code { font-weight: 900; color: var(--p); letter-spacing: .5px; white-space: nowrap; }
+    .st { display: inline-block; border-radius: 99px; padding: 4px 11px; font-size: 11px; font-weight: 800; white-space: nowrap; }
+    .st-pending { background: #FEF3C7; color: #92610c; }
+    .st-approved { background: #D1FAE5; color: #047857; }
+    .st-reviewing { background: #DBEAFE; color: #1d4ed8; }
+    .st-contacted { background: #E0E7FF; color: #4338ca; }
+    .st-offer { background: #FCE7F3; color: #be185d; }
+    .st-done { background: #DCFCE7; color: #15803d; }
+    .st-rejected { background: #FEE2E2; color: #b91c1c; }
+    .bar { width: 90px; height: 7px; background: #ECEEE8; border-radius: 99px; overflow: hidden; }
+    .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--p2), var(--p)); }
+    .empty { text-align: center; padding: 46px 12px; color: var(--tx2); }
+    /* مودال */
+    .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 50; display: none; align-items: flex-start; justify-content: center; padding: 26px 14px; overflow-y: auto; }
+    .modal-bg.open { display: flex; }
+    .modal { background: #fff; border-radius: 18px; width: 100%; max-width: 760px; padding: 22px; }
+    .modal h2 { margin: 0 0 4px; font-size: 16px; }
+    .modal .sub { color: var(--tx2); font-size: 12px; margin-bottom: 14px; }
+    .sec { border: 1px solid var(--bd); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
+    .sec b { display: block; font-size: 12px; color: var(--gold); margin-bottom: 8px; }
+    .kv { display: flex; flex-wrap: wrap; gap: 6px; }
+    .kv span { background: #F6F7F4; border: 1px solid var(--bd); border-radius: 8px; padding: 4px 10px; font-size: 12px; }
+    .kv span i { color: var(--tx2); font-style: normal; }
+    .photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+    .photos img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; border: 1px solid var(--bd); }
+    .modal-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+    .close-x { position: sticky; float: left; border: 0; background: #F3F4EF; width: 32px; height: 32px; border-radius: 99px; cursor: pointer; font-size: 15px; }
+    a { color: var(--p); }
+    .tel { font-weight: 900; }
+    @media (max-width: 720px) { th:nth-child(n+5), td:nth-child(n+5) { display: none; } }

@@ -1,0 +1,19 @@
+/* Melkino V2 — modal contract (spec §56): header/body/footer, ESC, backdrop, focus, bottom-sheet on mobile */
+.mx-modal{position:fixed;inset:0;z-index:100;display:none}
+.mx-modal.is-open{display:block}
+.mx-modal__backdrop{position:absolute;inset:0;background:rgba(10,20,19,.55)}
+.mx-modal__dialog{position:absolute;inset-inline:0;bottom:0;background:var(--mx-surface);
+  border-radius:var(--mx-radius-xl) var(--mx-radius-xl) 0 0;max-height:90dvh;display:flex;flex-direction:column;
+  padding-bottom:env(safe-area-inset-bottom)}
+@media(min-width:768px){
+  .mx-modal__dialog{inset:0;margin:auto;max-width:560px;max-height:min(86dvh,720px);height:fit-content;
+    inset-inline:0;border-radius:var(--mx-radius-xl)}
+  .mx-modal__dialog--wide{max-width:880px}
+}
+.mx-modal__header{display:flex;align-items:center;justify-content:space-between;gap:var(--mx-space-3);
+  padding:var(--mx-space-4) var(--mx-space-5);border-bottom:1px solid var(--mx-border)}
+.mx-modal__header h3{font-size:var(--mx-fs-18)}
+.mx-modal__body{padding:var(--mx-space-5);overflow-y:auto;min-height:0;flex:1}
+.mx-modal__footer{display:flex;gap:var(--mx-space-2);padding:var(--mx-space-4) var(--mx-space-5);
+  border-top:1px solid var(--mx-border);position:sticky;bottom:0;background:var(--mx-surface)}
+.mx-modal__footer .mx-btn--primary{flex:1}
